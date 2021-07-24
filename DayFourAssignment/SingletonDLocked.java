@@ -15,8 +15,8 @@ class Abc {
     }
     // One solution to avoid multiple threads simultaneously creating multiple singletons
     // is to use 'public static synchronized Abc getInstance()' However, 'synchornized'
-    // slows the program down
-    public static synchronized Abc getInstance()
+    // slows the program down, so synchronized is used as a nested test.
+    public static Abc getInstance()
     {
       if(obj == null) // this is to verify that getInstance() has not been
       // called before to get prior instances of the Singleton.
